@@ -49,9 +49,9 @@ Leia atentamente os enunciados e faça o que se pede!
 
 ### Sumário
 
--   <p><a href="#1">1.</a> Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1...</p>
+-   <p><a href="#1">1.</a> Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1... ;</p>
 
--   <p><a href="#2">2.</a> Desafio: Posicionamento do planeta - Posicione a criatura, Posicione a saudação, Ordene-os ;</p>
+-   <p><a href="#2">2.</a> Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos... ;</p>
 
 -   <p><a href="#3">3.</a> Desafio: Nuvens flutuantes - Torne a imagem flutuante, Torne a barra lateral flutuante, Adicione margens;</p>
 
@@ -69,12 +69,32 @@ Leia atentamente os enunciados e faça o que se pede!
 
 Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
 
+    n = 5
+
+    *****
+    *****
+    *****
+    *****
+    *****
+
 #### Resposta:
 
 <details>
  <summary>Código Javascript</summary>
 
 ```js
+let numero = 5;
+let quantAsteriscos = "";
+
+if (numero > 1) {
+    for (let i = 0; i <= numero; i += 1) {
+        console.log(quantAsteriscos);
+        quantAsteriscos = "";
+        for (let i = 1; i <= numero; i += 1) {
+            quantAsteriscos += "*";
+        }
+    }
+}
 
 ```
 
@@ -88,9 +108,17 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
 
 #
 
-### 1°
+### 2°
 
-Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+
+    n = 5
+
+    *
+    **
+    ***
+    ****
+    *****
 
 #### Resposta:
 
