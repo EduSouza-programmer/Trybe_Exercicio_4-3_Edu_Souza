@@ -53,7 +53,7 @@ Leia atentamente os enunciados e faça o que se pede!
 
 -   <p><a href="#2">2.</a> Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos... ;</p>
 
--   <p><a href="#3">3.</a> Desafio: Nuvens flutuantes - Torne a imagem flutuante, Torne a barra lateral flutuante, Adicione margens;</p>
+-   <p><a href="#3">3.</a> Agora inverta o lado do triângulo;</p>
 
 -   <p><a href="#4">4.</a> Desafio: Descendentes de Khan - Adicione regras descendentes;</p>
 
@@ -126,6 +126,15 @@ Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângul
  <summary>Código Javascript</summary>
 
 ```js
+let numero = 5;
+let quantAsteriscos = "";
+
+if (numero > 1) {
+    for (let i = 1; i <= numero; i += 1) {
+        quantAsteriscos += "*";
+        console.log(quantAsteriscos);
+    }
+}
 
 ```
 
@@ -139,9 +148,17 @@ Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângul
 
 #
 
-### 2°
+### 3°
 
-Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+Agora inverta o lado do triângulo. Por exemplo:
+
+    n = 5
+
+        *
+       **
+      ***
+     ****
+    *****
 
 #### Resposta:
 
@@ -149,7 +166,23 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
  <summary>Código Javascript</summary>
 
 ```js
+let numero = 5;
+let quantAsteriscos = [];
+let asteriscoFormatado = "";
 
+if (numero > 1) {
+    for (let a = 1; a <= numero; a += 1) {
+        quantAsteriscos.push("*");
+        for (let b = a + 1; b <= numero; b += 1) {
+            quantAsteriscos.push("\xa0");
+        }
+        asteriscoFormatado = quantAsteriscos.join("");
+        console.log(asteriscoFormatado.split("").reverse().join(""));
+        for (let i = quantAsteriscos.length; i > a; i--) {
+            quantAsteriscos.pop();
+        }
+    }
+}
 ```
 
 </details>
