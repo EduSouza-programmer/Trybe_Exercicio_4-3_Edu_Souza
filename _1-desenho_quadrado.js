@@ -1,12 +1,12 @@
 let numero = 5;
-let quantAsteriscos = "";
+let quantAsteriscos;
 
 if (numero > 1) {
-    for (let i = 0; i <= numero; i += 1) {
-        console.log(quantAsteriscos);
+    for (let a = 1; a <= numero; a += 1) {
         quantAsteriscos = "";
-        for (let i = 1; i <= numero; i += 1) {
+        for (let b = 1; b <= numero; b += 1) {
             quantAsteriscos += "*";
         }
+        console.log(quantAsteriscos);
     }
 }

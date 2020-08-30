@@ -37,8 +37,6 @@
 Hoje você vai aprender sobre algoritmos e lógica de programação, a base de tudo que faremos daqui pra frente.
 Assim como em uma receita de bolo, na programação, devemos passo a passo utilizar comandos para resolver um problema. Essa sequência de comandos se chama algoritmo. Para criar um algoritmo, temos que desenvolver uma capacidade analítica para transformar grandes problemas em pequenos e encadeados comandos lógicos. Desenvolvemos essa forma de raciocinar com a lógica de programação.
 
-
-
 ### Requisitos
 
 Leia atentamente os enunciados e faça o que se pede!
@@ -55,7 +53,7 @@ Leia atentamente os enunciados e faça o que se pede!
 
 -   <p><a href="#3">3.</a> Agora inverta o lado do triângulo;</p>
 
--   <p><a href="#4">4.</a> Desafio: Descendentes de Khan - Adicione regras descendentes;</p>
+-   <p><a href="#4">4.</a> Depois, faça uma pirâmide com n asteriscos de...;</p>
 
 ### **_Bônus_**
 
@@ -84,18 +82,17 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
 
 ```js
 let numero = 5;
-let quantAsteriscos = "";
+let quantAsteriscos;
 
 if (numero > 1) {
-    for (let i = 0; i <= numero; i += 1) {
-        console.log(quantAsteriscos);
+    for (let a = 1; a <= numero; a += 1) {
         quantAsteriscos = "";
-        for (let i = 1; i <= numero; i += 1) {
+        for (let b = 1; b <= numero; b += 1) {
             quantAsteriscos += "*";
         }
+        console.log(quantAsteriscos);
     }
 }
-
 ```
 
 </details>
@@ -135,7 +132,6 @@ if (numero > 1) {
         console.log(quantAsteriscos);
     }
 }
-
 ```
 
 </details>
@@ -195,9 +191,15 @@ if (numero > 1) {
 
 #
 
-### 3°
+### 4°
 
-Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+Depois, faça uma pirâmide com n asteriscos de base:
+
+    n = 5
+
+      *
+     ***
+    *****
 
 #### Resposta:
 
@@ -205,7 +207,21 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
  <summary>Código Javascript</summary>
 
 ```js
+let numero = 5;
+let quantAsteriscos = [];
 
+if (numero > 1) {
+    for (let a = 1; a <= numero; a += 1) {
+        quantAsteriscos = "";
+        for (let b = a; b <= numero; b += 1) {
+            quantAsteriscos += "\xa0";
+        }
+        for (let c = 1; c <= a; c += 1) {
+            quantAsteriscos += "*\xa0";
+        }
+        console.log(quantAsteriscos);
+    }
+}
 ```
 
 </details>
@@ -240,7 +256,6 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
 </p>
 
 #
-
 
 ## Licença
 

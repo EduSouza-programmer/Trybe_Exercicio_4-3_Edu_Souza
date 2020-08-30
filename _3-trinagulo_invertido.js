@@ -1,6 +1,25 @@
 let numero = 5;
-let quantAsteriscos = [];
 let asteriscoFormatado = "";
+
+if (numero > 1) {
+    for (let a = 1; a <= numero; a += 1) {
+        asteriscoFormatado = "";
+
+        for (let b = a; b <= numero; b += 1) {
+            asteriscoFormatado += "\xa0";
+        }
+        for (let c = 1; c <= a; c += 1) {
+            asteriscoFormatado += "*";
+        }
+        console.log(asteriscoFormatado);
+    }
+}
+
+// Ou podemos realizar outra lógica também o/
+
+/*
+
+let quantAsteriscos = [];
 
 if (numero > 1) {
     for (let a = 1; a <= numero; a += 1) {
@@ -15,3 +34,4 @@ if (numero > 1) {
         }
     }
 }
+*/
