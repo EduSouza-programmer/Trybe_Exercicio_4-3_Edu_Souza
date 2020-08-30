@@ -57,7 +57,9 @@ Leia atentamente os enunciados e faça o que se pede!
 
 ### **_Bônus_**
 
--   <p><a href="#Bônus">Bônus:</a> Convite de evento;</p>
+-   <p><a href="#Bônus_1">Bônus_1:</a> Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de...;</p>
+
+-   <p><a href="#Bônus_2">Bônus_2:</a> Faça um programa que diz se um número definido numa variável é primo ou não;</p>
 
 #
 
@@ -163,8 +165,27 @@ Agora inverta o lado do triângulo. Por exemplo:
 
 ```js
 let numero = 5;
-let quantAsteriscos = [];
 let asteriscoFormatado = "";
+
+if (numero > 1) {
+    for (let a = 1; a <= numero; a += 1) {
+        asteriscoFormatado = "";
+
+        for (let b = a; b <= numero; b += 1) {
+            asteriscoFormatado += "\xa0";
+        }
+        for (let c = 1; c <= a; c += 1) {
+            asteriscoFormatado += "*";
+        }
+        console.log(asteriscoFormatado);
+    }
+}
+
+// Ou podemos realizar outra lógica também o/
+
+/*
+
+let quantAsteriscos = [];
 
 if (numero > 1) {
     for (let a = 1; a <= numero; a += 1) {
@@ -179,6 +200,7 @@ if (numero > 1) {
         }
     }
 }
+*/
 ```
 
 </details>
@@ -208,7 +230,7 @@ Depois, faça uma pirâmide com n asteriscos de base:
 
 ```js
 let numero = 5;
-let quantAsteriscos = [];
+let quantAsteriscos = "";
 
 if (numero > 1) {
     for (let a = 1; a <= numero; a += 1) {
@@ -234,9 +256,44 @@ if (numero > 1) {
 
 #
 
-### 4°
+### Bônus_1
 
-Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
+    Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+    n = 7
+
+       *
+      * *
+     *   *
+    *******
+
+#### Resposta:
+
+<details>
+ <summary>Código Javascript -- em resolução</summary>
+
+```js
+
+```
+
+</details>
+
+<p align="right">
+    <a href="#Sumário">
+    <img alt="Back Sumário" src="https://img.shields.io/badge/Back-Sum%C3%A1rio-orange">
+  </a>
+</p>
+
+#
+
+### Bônus_2
+
+Faça um programa que diz se um número definido numa variável é primo ou não.
+
+-   Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele com quaisquer outros números dá resto diferente de zero.
+
+-   Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
 
 #### Resposta:
 
@@ -244,7 +301,50 @@ Para o primeiro exercício de hoje, faça um programa que, dado um valor n qualq
  <summary>Código Javascript</summary>
 
 ```js
+function buscaNumeroPrimos(n) {
+    let numerosPrimos = [];
+    let indexNumeros = [];
+    let contadora = 0;
 
+    for (let i = 2; i < n; i++) {
+        //Organizando a lista de números a partir do 2
+        indexNumeros[i] = i;
+        //console.log("aqui esta o conteudo da array " + indexNumeros[i]);
+    }
+
+    //console.log("Verificando tamanho da array indexNumeros, têm : " + indexNumeros.length);
+    //console.log("Valor da minha entrada" + n);
+    for (let i = 0; i < indexNumeros.length; i++) {
+        contadora = 0;
+        for (let cal = 0; cal < indexNumeros.length; cal++) {
+            if (indexNumeros[i] % cal === 0) {
+                console.log("Sendo : " + indexNumeros[i] + " / " + cal + " então resta 0");
+                contadora++;
+            }
+        }
+
+        console.log("O número " + indexNumeros[i] + " foi dividido " + contadora + " vezes");
+        if (contadora === 2) {
+            numerosPrimos.push(indexNumeros[i]);
+            console.log("Então o número: " + indexNumeros[i] + " ,é um número primo");
+        } else {
+            console.log("O número: " + indexNumeros[i] + " não é um número primo");
+        }
+    }
+
+    for (let i = 0; i < numerosPrimos.length; i++) {
+        console.log(
+            "Este são os números primos conforme solicitado de 0 a " +
+                n +
+                " na array numerosPrimos: " +
+                numerosPrimos[i]
+        );
+    }
+
+    return numerosPrimos;
+}
+
+buscaNumeroPrimos(20);
 ```
 
 </details>

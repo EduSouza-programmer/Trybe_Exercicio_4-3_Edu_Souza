@@ -1,5 +1,5 @@
 let numero = 5;
-let quantAsteriscos = [];
+let quantAsteriscos = "";
 
 if (numero > 1) {
     for (let a = 1; a <= numero; a += 1) {
