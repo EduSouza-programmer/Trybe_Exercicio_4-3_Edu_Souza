@@ -229,7 +229,7 @@ Depois, faça uma pirâmide com n asteriscos de base:
  <summary>Código Javascript</summary>
 
 ```js
-let numero = 5;
+let numero = 10;
 let quantAsteriscos = "";
 
 if (numero > 1) {
@@ -241,7 +241,10 @@ if (numero > 1) {
         for (let c = 1; c <= a; c += 1) {
             quantAsteriscos += "*\xa0";
         }
-        console.log(quantAsteriscos);
+        // conforme a saida do exercício, faço uma verificação para imprimir somente as linhas impares.
+        if (a % 2 != 0) {
+            console.log(quantAsteriscos);
+        }
     }
 }
 ```
